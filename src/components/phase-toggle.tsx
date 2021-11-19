@@ -55,6 +55,6 @@ export default styled(PhaseToggle)`
   }
   .phase-icon {
     float: left;
-    margin-right: 10px;
+    margin: 5px 10px 0 0;
   }
 `
