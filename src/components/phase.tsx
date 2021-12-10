@@ -12,7 +12,9 @@ export interface PhaseProps extends React.ComponentProps<any> {
 }
 
 const Phase: React.FC<PhaseProps> = ({ className }) => {
-  const { data, loading } = useData(commonService.getEndpointUrl())
+  const { data, loading } = useData(
+    commonService.getEndpointUrl('0103e005-b762-485f-8f7e-722019d4f302')
+  )
   return (
     <Content loading={loading} className={className}>
       <Row>
@@ -28,7 +30,6 @@ const Phase: React.FC<PhaseProps> = ({ className }) => {
                           key={it.id}
                           value={it.name}
                           tasks={it.tasks}
-                          className={'hello'}
                         ></PhaseToggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey={it.id}>
